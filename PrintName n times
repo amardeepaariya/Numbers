@@ -1,0 +1,32 @@
+/*
+Enter your Name
+AMARDEEP KUMAR
+Enter how many times you want print
+5
+
+AMARDEEP KUMAR
+AMARDEEP KUMAR
+AMARDEEP KUMAR
+AMARDEEP KUMAR
+AMARDEEP KUMAR
+
+*/
+
+import java.util.Scanner;
+     class PrintName
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("Enter your Name");
+			 String a=sc.nextLine();
+			 System.out.println("Enter how many times you want print");
+			 int n=sc.nextInt();
+			 while(n>0)
+			 {
+				 System.out.println(a);
+				 n--;
+			 }
+			 
+		 }
+	 }
