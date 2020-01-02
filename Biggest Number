@@ -1,0 +1,17 @@
+import java.util.Scanner;
+  class BiggestNo
+  {
+    public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the 1st No.");
+		float a=sc.nextFloat();
+		System.out.println("Enter the 2nd No.");
+		float b=sc.nextFloat();
+		if(a>=b)
+			System.out.println(a+" The No. is Biggest No.");
+		else
+			System.out.println(b+" The No. is Biggest No.");
+	}
+  
+  }
