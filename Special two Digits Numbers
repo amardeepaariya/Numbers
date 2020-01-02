@@ -1,0 +1,35 @@
+import java.util.Scanner;
+     class SpecTDN
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc= new Scanner(System.in);
+			  System.out.println("Enter Two Digit Number");
+			  int n=sc.nextInt();
+			  
+			  boolean sp=specialTwoDigitNumber(n);
+			  if(sp==true)
+				 System.out.println("The Number "+n+" is Special two Digit Number. " );
+			 else
+				 System.out.println("The Number "+n+" is NOT Special two Digit Number ");
+		 }
+		 
+		 static boolean specialTwoDigitNumber(int x)
+		 {
+			 int a=x;
+			 int sum=0,re;
+			 int pro=1;
+			 while(a!=0)
+			 {
+				 re=a%10;                     //we take 59
+				 a=a/10;                      //x=59=5,9
+				 sum=sum+re;                  //sum=5+9=14, pro=5*9=45
+				 pro=pro*re;                  //sum+pro=14+45=59=x
+				 
+			 }
+			 if((sum+pro)==x)
+				 return true;
+			 else
+				 return false;
+		 }
+	 }
