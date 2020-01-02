@@ -1,0 +1,36 @@
+/*
+Enter Two Digit Number
+15
+The Number 15 is NOT Prime Number
+*/
+
+
+
+import java.util.Scanner;
+     class PrimeNo
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc= new Scanner(System.in);
+			  System.out.println("Enter Two Digit Number");
+			  int n=sc.nextInt();
+			  
+			  boolean sp=isPrimeNumber(n);
+			  if(sp==true)
+				 System.out.println("The Number "+n+" is Prime Number Number. " );
+			 else
+				 System.out.println("The Number "+n+" is NOT Prime Number ");
+		 }
+		 
+		 static boolean isPrimeNumber(int x)
+		 {
+			 int i=2;
+			 while(i<=x/2)
+			 {
+				 if(x%i==0)
+					 return false;
+				 i++;
+			 }
+			 return true;
+		 }
+	 }
