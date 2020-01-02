@@ -1,0 +1,58 @@
+import java.util.Scanner;
+     class SumOfDisariumNo
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("Range of Disarium Number tha you Want...");
+			 int n=sc.nextInt();
+			 
+			 int sum=0;
+			 for(int i=1;i<=n;i++)
+			 {
+				 boolean b=isDisarium(i);
+				 if(b==true)
+				 {
+					sum=sum+i; 
+					System.out.println(i);
+				 }
+			 }
+			 System.out.println("The SUM of Disarium Number b/w 1 to "+n+" are "+sum);
+		 }
+		 
+		 
+		 static boolean isDisarium(int n)
+		 {
+			 int sum=0; int t=n;
+			 int dc=count(n);
+			 do{
+				 int r=n%10;
+				 sum=sum+pow(r,dc);
+				 n=n/10;
+				 dc--;
+			 }while(n!=0);
+			 return sum==t;
+		 }
+		 
+		 static int count(int x)
+		 {
+			int count=0;
+			do{
+				count++;
+				x=x/10;
+			}while(x!=0);
+			return count;
+		 }
+		 
+		 static int pow(int x,int y)
+		 {
+			 int pw=1;
+			 while(y>0)
+			 {
+				 pw=pw*x;
+				 y--;
+			 }
+			 return pw;
+		 }
+	
+	 }
