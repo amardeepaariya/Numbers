@@ -1,0 +1,29 @@
+/*
+Enter the Number
+45
+45 is NOT Special two Digit No.
+
+*/
+
+import java.util.Scanner;
+class ReadNumber
+{
+	public static void main(String[] args)
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the Number");
+		int n=s.nextInt();
+		
+	
+		
+			int b=n/10;
+		int a=n%10;
+		 int sum=(a+b)+(a*b);
+		 
+		 if(sum==n)
+			 System.out.println(n+" is Special two Digit No.");
+		 else
+			 System.out.println(n+" is NOT Special two Digit No.");
+		
+	}
+}
