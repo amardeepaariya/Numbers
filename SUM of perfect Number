@@ -1,0 +1,46 @@
+/*
+Enter the Range of Perfect Number...
+500
+6
+28
+496
+The SUM of perfect Number b/w 1 to 500 are 530
+
+*/
+
+import java.util.Scanner;
+     class SumOfPerfect
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("Enter the Range of Perfect Number...");
+			 int n=sc.nextInt();
+			 
+			 int sum=0;
+			 for(int i=1;i<=n;i++)
+			 {
+				 boolean b=isPerfect(i);
+				 if(b==true)
+				 {
+					 sum=sum+i;
+					 System.out.println(i);
+				 }
+					 
+			 }
+			 System.out.println("The SUM of perfect Number b/w 1 to "+n+" are "+sum);
+		 }
+		 
+		 static boolean isPerfect(int n)
+		 {
+			 int sum=0,i=1,t=n;
+			 while(i<=n/2)
+			 {
+				 if(n%i==0)
+					 sum=sum+i;
+					 i++;
+			 }
+				 return sum==t;
+
+		 }
+	 }
