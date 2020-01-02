@@ -1,0 +1,49 @@
+/*
+
+Enter The Number
+145
+The Number 145 is Strong Number. 
+
+*/
+
+import java.util.Scanner;
+     class StrongNo
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc= new Scanner(System.in);
+			  System.out.println("Enter The Number");
+			  int n=sc.nextInt();
+			  
+			  boolean sp=strongNumber(n);
+			  if(sp==true)
+				 System.out.println("The Number "+n+" is Strong Number. " );
+			 else
+				 System.out.println("The Number "+n+" is NOT Strong Number ");
+		 }
+		 
+		 static boolean strongNumber(int n)
+		 {
+			int sum=0,t=n;
+			 do
+			 {
+				 int r=n%10;
+				 sum=sum+fact(r);
+				 n=n/10;
+			 }
+				 while(n!=0); 
+				 return sum==t;
+		 }
+		 
+		 static int fact(int x)
+		 {
+			 int f=1;
+			 while(x>1)
+			 {
+				 f=f*x;
+				 x--;
+
+			 }
+			 return f;
+		 }
+	 }
