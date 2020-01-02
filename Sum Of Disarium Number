@@ -1,3 +1,20 @@
+/*
+Range of Deserium Number tha you Want...
+100
+1
+2
+3
+4
+5
+6
+7
+8
+9
+89
+The SUM of Deserium Number b/w 1 to 100 are 134
+
+*/
+
 import java.util.Scanner;
      class SumOfDisariumNo
 	 {
