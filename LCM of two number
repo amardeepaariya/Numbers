@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class LCM {
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the 1st No.");
+		int a=s.nextInt();
+		System.out.println("Enter the 2nd No.");
+		int b=s.nextInt();
+		int L;
+		for(L=a>b?a:b;L<=a*b;L=L+(a>b?a:b)) 
+		{
+			if(L%a==0 && L%b==0)
+				break;
+			
+		}
+		
+		System.out.println("LCM of the two nos. are  "+L);
+	}
+
+}
