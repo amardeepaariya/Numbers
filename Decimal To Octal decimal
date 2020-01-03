@@ -1,0 +1,30 @@
+/*
+Enter thr Decimail Number that you Want to Change....
+8
+The OctaDecimal of 8 is 10
+
+*/import java.util.Scanner;
+     class DecToOcta
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("Enter thr Decimail Number that you Want to Change....");
+			 int n=sc.nextInt();
+			 
+			 String st=decToOcta(n);
+			 System.out.println("The OctaDecimal of "+n+" is "+st);
+		 }
+		 
+		 
+		 static String decToOcta(int n)
+		 {
+			 String octa="";
+			 do{
+				 int r=n%8;
+				 octa=r+octa;
+				 n=n/8;
+			 }while(n!=0);
+				 return octa;
+		 }
+	 }
