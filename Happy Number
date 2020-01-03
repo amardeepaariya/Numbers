@@ -1,0 +1,45 @@
+/*
+Enter the Number to check...
+28
+The Number 28 is HAPPY Number.
+
+*/
+
+import java.util.Scanner;
+   class HappyNo
+   {
+	   public static void main(String[] args)
+	   {
+		   Scanner sc=new Scanner(System.in);
+		   System.out.println("Enter the Number to check...");
+		   int n=sc.nextInt();
+		  // int num=n;
+		   int result=n;
+		   while(result!=1&&result!=4)
+		        {
+			      result=isHappyNumber(result);
+		        }
+		   if(result==1)
+			   System.out.println("The Number "+n+" is HAPPY Number.");
+		   else if(result==4)
+               System.out.println("The Number "+n+" is NOT HAPPY Number.");
+		   
+	   }
+	   
+	   
+	   
+	  static int isHappyNumber(int n)
+	  {
+		  int re=0; 
+		  int sum=0;
+		  while(n>0)
+		  {
+			re=n%10;
+			sum=sum+(re*re);
+			n=n/10;
+		  }
+		  return sum;
+	  }
+	   
+	   
+   }
