@@ -1,0 +1,32 @@
+import java.util.Scanner;
+     class EOCount
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("The Number you want to Check ");
+			 int n=sc.nextInt();
+			 
+			 int c=0, d=0,r;
+			 
+			 //for(int i=1;i<=n;i++)
+				 while(n!=0)
+					
+
+			 {
+				 r=n%10;
+				 if(r%2==0)
+				 {
+					 c=c+1;
+				 }
+				  else
+				  {
+					  d=d+1;
+				  }
+				  
+					n=n/10;
+			 }
+			 System.out.println("Total  Even No. "+c);
+			 System.out.println("Total  Odd  No. "+d);
+		 }
+	 }
