@@ -1,0 +1,29 @@
+import java.util.Scanner;
+     class CountEO
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("How much Number you want to Check ");
+			 int n=sc.nextInt();
+			 
+			 int c=0, d=0;
+			 
+			 for(int i=1;i<=n;i++)
+			 {
+				 
+				 if(i%2==0)
+				 {
+					  c++;
+				 }
+				  else
+				  {
+					  d++;
+				  }
+				  
+					
+			 }
+			 System.out.println("Total  Even No. "+c);
+			 System.out.println("Total  Odd  No. "+d);
+		 }
+	 }
