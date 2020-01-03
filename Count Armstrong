@@ -1,0 +1,80 @@
+/*
+Enter the Range of Armstrong Number...
+500
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+153
+370
+371
+407
+The Armstrong number b/w 1 to 500 is 13
+
+*/
+
+import java.util.Scanner;
+     class CouArmstrong
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("Enter the Range of Armstrong Number...");
+			 int n=sc.nextInt();
+			 
+			 int c=0;
+			 for(int i=1;i<=n;i++)
+			 {
+				 boolean arm=isArmstrong(i);
+				 if(arm==true)
+				 {
+					 c++;
+					 System.out.println(i);
+				 }
+					 
+			 }
+			 System.out.println("The Armstrong number b/w 1 to "+n+" is "+c);
+		 }
+		 
+		 static boolean isArmstrong(int n)
+		 {
+			 int sum=0,t=n;
+			 int dc=count(n);
+			 do{
+				 int r=n%10;
+				 sum=sum+pow(r,dc);
+				 n=n/10;
+			 }while(n!=0);
+			 return sum==t;
+		 }
+		 
+		 static int count(int x)
+		 {
+			 int count=0;
+			 do{
+				 count++;
+				 x=x/10;
+			 }while(x!=0);
+			 return count;
+		 }
+		 
+		 
+		 static int pow(int x,int y)
+		 {
+			 int pw=1;
+			 while(y>0)
+			 {
+				 pw=pw*x;
+				 y--;
+			 }
+			 return pw;
+		 }
+		 
+	 }
