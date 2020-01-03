@@ -1,0 +1,32 @@
+/*
+Enter the binory code...
+1110011
+The Decimal Number is 115
+
+*/
+
+import java.util.Scanner;
+     class BinToDec
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("Enter the binory code...");
+			 int n=sc.nextInt();
+			 
+			 binToDec(n);
+			 
+		 }
+		 
+	     static void binToDec(int bin)
+		 {
+			 int dec=0,c=0;
+			 do{
+				 int r=bin%10;
+				 dec=dec+r*(int)Math.pow(2,c);
+				 c++;
+				 bin=bin/10;
+			 }while(bin!=0);
+			  System.out.println("The Decimal Number is "+dec);
+		 }
+	 }
