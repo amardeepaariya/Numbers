@@ -1,0 +1,65 @@
+/*
+Enter The Number
+45
+The Number 45 is NOT Amstrong Number 
+
+*/
+
+
+
+import java.util.Scanner;
+     class Armstrong
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc= new Scanner(System.in);
+			  System.out.println("Enter The Number");
+			  int n=sc.nextInt();
+			  
+			  boolean sp=isAmstrong(n);
+			  if(sp==true)
+				 System.out.println("The Number "+n+" is Amstrong Number. " );
+			 else
+				 System.out.println("The Number "+n+" is NOT Amstrong Number ");
+		 }
+		 
+		 static boolean isAmstrong(int n)
+		 {
+			int sum=0,t=n;
+			int dc=count(n);
+			do
+			{
+				int r=n%10;
+				sum=sum+pow(r,dc);
+				n=n/10;
+			}
+			 while(n!=0);
+			 return sum==t;
+		 }
+		 
+		 static int count(int x)
+		 {
+			 int count=0;
+			 do
+			 {
+				 count++;
+				 x=x/10;
+				 
+			 }
+			 while(x!=0);
+			 return count;
+		 }
+		 
+		 
+		 
+		static int pow(int x,int y)
+		 {
+			 int pw=1;
+			 while(y>0)
+			 {
+				 pw=pw*x;
+				 y--;
+			 }
+			 return pw;
+		 }
+	 }
