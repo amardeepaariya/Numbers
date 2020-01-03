@@ -1,0 +1,33 @@
+/*
+Enter the Decimail Number to Convert...
+45
+The binary Code of 45 is 101101
+
+*/
+
+
+import java.util.Scanner;
+     class DecToBinary
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("Enter the Decimail Number to Convert...");
+			 int n=sc.nextInt();
+			 
+			 String st=decToBinary(n);
+			 System.out.println("The binary Code of "+n+" is "+st);
+		 }
+		 
+		 
+		 static String decToBinary(int n)
+		 {
+			 String bin="";
+			 do{
+				 int r=n%2;
+				 bin=r+bin;
+				 n=n/2;
+			 }while(n!=0);
+			 return bin;
+		 }
+	 }
