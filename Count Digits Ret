@@ -1,0 +1,33 @@
+/*
+Enter the Number that you Count... 
+4524
+Total Digit present in the 4524 is 4
+
+*/
+
+import java.util.Scanner;
+    class CountDRet
+	{
+		public static void main(String[] args)
+		{
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter the Number that you Count... ");
+			int n=sc.nextInt();
+			
+			int cont=countDigit(n);
+			System.out.println("Total Digit present in the "+n+" is "+cont);
+		}
+		
+		static int countDigit(int x)
+		{
+			int i=0;
+			do
+			{
+				x=x/10;
+				i++;
+			}
+			while(x!=0);
+			
+			return i;
+		}
+	}
