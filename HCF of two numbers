@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class HCF {
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter the 1st No. ");
+		int a=s.nextInt();
+		System.out.println("Enter the 2nd No. ");
+		int b=s.nextInt();
+		int H;
+		for(H=a<b?a:b;H>=1;H--) 
+		{
+			if(a%H==0 && b%H==0)
+				break;
+		}
+		System.out.println("HCF of the two Nos. are "+H);
+	}
+
+}
