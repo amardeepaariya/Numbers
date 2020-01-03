@@ -1,3 +1,11 @@
+/*
+The Number you want to Check 
+51876
+Total  Even No. 2
+Total  Odd  No. 3
+
+*/
+
 import java.util.Scanner;
      class EOCount
 	 {
