@@ -1,0 +1,44 @@
+/*
+Enter the Decimal Number to Change to Hexa....
+4524
+The HexaDecimal of number 4524 is FFAC
+
+*/
+
+import java.util.Scanner;
+     class DecToHex
+	 {
+		 public static void main(String[] args)
+		 {
+			 Scanner sc=new Scanner(System.in);
+			 System.out.println("Enter the Decimal Number to Change to Hexa....");
+			 int n=sc.nextInt();
+			 
+			 String s=decToHexa(n);
+			 System.out.println("The HexaDecimal of number "+n+" is "+s);
+		 }
+		 
+		 static String decToHexa(int n)
+		 {
+			 String st="";
+			 do{
+				 int r=n%16;
+				 if(r==10)
+					 st="A"+st;
+				 else if(r==11)
+					 st="B"+st;
+				 else if(r==12)
+					 st="C"+st;
+				 else if(r==13)
+					 st="D"+st;
+				 else if(r==14)
+					 st="E"+st;
+				 else 
+					 st="F"+st;
+				 n=n/16;
+			 }while(n!=0);
+			 return st;
+		 }
+		 
+		 
+	 }
