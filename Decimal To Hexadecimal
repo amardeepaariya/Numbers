@@ -23,7 +23,9 @@ import java.util.Scanner;
 			 String st="";
 			 do{
 				 int r=n%16;
-				 if(r==10)
+				 if(r<10)
+					 st=r+st;
+				 else if(r==10)
 					 st="A"+st;
 				 else if(r==11)
 					 st="B"+st;
